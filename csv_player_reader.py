@@ -29,8 +29,6 @@ def read_csv_player(file_name_2):
         #if the input file name is wrong drops an error message
         sys.exit('Hibás file név!')
 
-    else:
-        print(player_list)
+    else:        
         return player_list
     
-read_csv_player('lakers_players.csv')
