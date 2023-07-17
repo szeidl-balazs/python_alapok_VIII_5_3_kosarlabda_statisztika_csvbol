@@ -1,4 +1,4 @@
-import csv_score_reader
+
 
 #this function converts string values to integer, only the score has to be converted to math calculations
 def string_to_integer_calculator(list):
@@ -28,4 +28,3 @@ def array_to_tuple_converter(list):
 
     return list
 
-array_to_tuple_converter(string_to_integer_calculator(csv_score_reader.read_csv_score('lakers_heats_final.csv')))

@@ -1,4 +1,4 @@
-import csv_player_reader
+
 
 #this function converts nested lists [[], []] to nested tuples ((), ())
 def array_to_tuple_converter(list):
@@ -18,4 +18,3 @@ def array_to_tuple_converter(list):
 
     return list
 
-array_to_tuple_converter(csv_player_reader.read_csv_player('lakers_players.csv'))
