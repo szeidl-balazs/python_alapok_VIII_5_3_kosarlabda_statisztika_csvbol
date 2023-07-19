@@ -10,15 +10,15 @@ lakers_final_game = converter_scores.array_to_tuple_converter(converter_scores.s
 
 
 player_name = 'D. Green'
-quarter = 4
-score_type = 2
+quarter = '1'
+score_type = '3'
 
 """Converts name to jersey number:"""
 
 def get_jersey_number(players, name):
     for player in players:
         if name in player:
-            return player[1]
+            return player[2]
 
 jersey_number = get_jersey_number(lakers_players, player_name)
 
@@ -29,8 +29,8 @@ def get_player_score_in_quarter(scores, quarter, jersey):
     sum = 0
     
     for score in scores:
-        if quarter == score[0] and jersey == score[2]:
-            sum += score[1]
+        if quarter == score[1] and jersey == score[3]:
+            sum += score[2]
 
     return sum
 
@@ -44,8 +44,8 @@ def get_score_type_count(scores, quarter, jersey, score_type):
     sum_of_count = []
     
     for score in scores:  
-        if (quarter == score[0] and score_type == score[1] and jersey == score[2]):
-            sum_of_count.append(score[1])
+        if (quarter == score[1] and score_type == score[2] and jersey == score[3]):
+            sum_of_count.append(score[2])
         
 
     return len(sum_of_count)
