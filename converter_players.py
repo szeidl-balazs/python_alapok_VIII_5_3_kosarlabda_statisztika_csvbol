@@ -1,5 +1,13 @@
 
 
+#this fucnttion converts the strings to integer
+
+def string_to_integer_converter(list):
+    for row in list:
+        row[2] = int(row[2])
+
+    return list
+
 #this function converts nested lists [[], []] to nested tuples ((), ())
 def array_to_tuple_converter(list):
 

@@ -4,14 +4,14 @@ import converter_scores
 import csv_score_reader
 
 
-lakers_players = converter_players.array_to_tuple_converter(csv_player_reader.read_csv_player('lakers_players.csv'))
+lakers_players = converter_players.array_to_tuple_converter(converter_players.string_to_integer_converter(csv_player_reader.read_csv_player('lakers_players.csv')))
 
-lakers_final_game = converter_scores.array_to_tuple_converter(converter_scores.string_to_integer_calculator(csv_score_reader.read_csv_score('lakers_heats_final.csv')))
+lakers_final_game = converter_scores.array_to_tuple_converter(converter_scores.string_to_integer_converter(csv_score_reader.read_csv_score('lakers_heats_final.csv')))
 
 
 player_name = 'D. Green'
-quarter = '1'
-score_type = '3'
+quarter = 1
+score_type = 2
 
 """Converts name to jersey number:"""
 
@@ -55,14 +55,3 @@ score_type_count = get_score_type_count(lakers_final_game, quarter, jersey_numbe
 
 
 
-def print_player_stat_in_quarter(name, quarter, player_scores, score_type, score_type_count):
-
-    print(name + ' statisztikája a(z) ' + str(quarter) + '. negyedben:')
-    if player_scores != 0:
-        print('Elért pontok: ' + str(player_scores))
-        print(str(score_type) + ' pontos dobások száma: ' + str(score_type_count))
-    else:
-        print('Nem ért el pontot a negyedben.')
-    
-
-print_player_stat_in_quarter(player_name, quarter, player_scores, score_type, score_type_count)

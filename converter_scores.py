@@ -1,11 +1,13 @@
 
 
 #this function converts string values to integer, only the score has to be converted to math calculations
-def string_to_integer_calculator(list):
+def string_to_integer_converter(list):
 
     #converts the score value from string to integer to calculate with that
     for row in list:
+        row[1] = int(row[1])
         row[2] = int(row[2])
+        row[3] = int(row[3])
         
     return list
  
